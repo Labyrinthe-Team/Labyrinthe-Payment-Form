@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Labyrinthe Payment</title>
+
+  <!-- Favicons -->
+  <link href="./img/labyrinthe-logo-without-name-green-orange.png" rel="icon">
+  <link href="./img/labyrinthe-logo-without-name-green-orange.png" rel="apple-touch-icon">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <link rel="stylesheet" href="css/mdb.min.css" />
+</head>
+
+<body style="height: 100%; background-color: #008374">
+  <section style="background-color: #008374">
+    <div class="container py-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-9 col-lg-7 col-xl-5">
+          <div class="card">
+
+            <div align="center" class="mt-2">
+              <img src="img/labyrinthe-logo-without-name-black.png" class="card-img-top" alt="Logo Labyrinthe"
+                style="width: 50%;" />
+            </div>
+
+            <div class="rounded-bottom" style="background-color: #eee;">
+              <form action="https://payment.labyrinthe-rdc.com/api/beta/mobile" method="post" class="card-body">
+                <p class="mb-4">Tester votre premier payment</p>
+
+                <div data-mdb-input-init class="form-outline mb-3">
+                  <input type="text" id="phone" name="phone" class="form-control" placeholder="0891000200" required/>
+                  <label class="form-label" for="phone">Numéro de téléphone</label>
+                </div>
+
+                <!-- Hidden inputs -->
+                <div data-mdb-input-init class="form-outline mb-3">
+                  <input type="text" name="token" value="_token" hidden />
+                  <input type="text" name="reference" value="_reference" hidden />
+                </div>
+
+                <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-block"
+                  style="background: #f85a40; color: white;">
+                  Essayer maintenant
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
+
+
+<script type="text/javascript" src="js/mdb.min.js"></script>
